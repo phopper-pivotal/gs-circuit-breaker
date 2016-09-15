@@ -1,3 +1,4 @@
+INSERT INTO BOOK(id, title, publisher) VALUES (0, 'XML', 'QUE');
 INSERT INTO BOOK(id, title, publisher) VALUES (1, 'Spring in Action', 'Manning');
 INSERT INTO BOOK(id, title, publisher) VALUES (2, 'Cloud Native Java', 'OReilly');
 INSERT INTO BOOK(id, title, publisher) VALUES (3, 'Learning Spring Boot', 'Packt');
@@ -6,3 +7,5 @@ INSERT INTO BOOK(id, title, publisher) VALUES (5, 'Domain-Driven Design', 'Wesle
 INSERT INTO BOOK(id, title, publisher) VALUES (6, 'Microservices Architecture', 'OReilly');
 INSERT INTO BOOK(id, title, publisher) VALUES (7, 'Architecting for Scale', 'OReilly');
 INSERT INTO BOOK(id, title, publisher) VALUES (8, 'PaaS', 'OReilly');
+INSERT INTO BOOK(id, title, publisher) VALUES (9, 'RESTful Web Services', 'OReilly');
+INSERT INTO BOOK(id, title, publisher) VALUES (10, 'J2EE Design and Development', 'wrox');

@@ -15,14 +15,14 @@ public class BookService {
         this.restTemplate = rest;
     }
 
-    @HystrixCommand(fallbackMethod = "reliable")
+    @HystrixCommand(fallbackMethod = "recommendedTitle")
     public String readingList() {
-        URI uri = URI.create("http://localhost:8090/recommended");
+        URI uri = URI.create("http://localhost:8090/recommendedTitle");
 
         return this.restTemplate.getForObject(uri, String.class);
     }
 
-    public String reliable() {
+    public String recommendedTitle() {
 
         return "Cloud Native Java (O'Reilly)";
     }
