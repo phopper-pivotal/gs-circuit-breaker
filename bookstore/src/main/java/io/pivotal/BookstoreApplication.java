@@ -1,21 +1,22 @@
 package io.pivotal;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
 @SpringBootApplication
 public class BookstoreApplication {
-    private static List<String> readingList;
+    @Autowired
+    BookRepository bookRepository;
 
-    @RequestMapping(value = "/recommended")
-    public String readingList(){
-        return readingList.stream().map(i -> i.toString()).collect(Collectors.joining(", "));
+    @RequestMapping(value = "/recommendedTitles")
+    public String recommendedTitles() {
+        return bookRepository.findByPublisher("OReilly").stream().map(Book::getTitle).collect(Collectors.joining("\n"));
     }
 
     public static void main(String[] args) {
