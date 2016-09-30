@@ -4,5 +4,4 @@ applications:
   instances: 1
   host: bookstore-${random-word}
   path: target/bookstore-0.0.1-SNAPSHOT.jar
-  #buildpack: java_buildpack
   #buildpack:  java-buildpack-springfix
